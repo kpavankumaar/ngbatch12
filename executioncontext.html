@@ -9,12 +9,23 @@
 		var a = 10 ; // 
 		var b = a ;
 		console.log(a);
-		c();
+		
+		
 		function c(){
 			var b;
 			console.log(b); //  
 		}
-
+		
+		function d(){
+			var b = 26;
+			console.log(b);
+			c();
+		}
+		
+		function e(){
+			d();
+		}
+		e();
 	</script>
 </body>
 </html>
