@@ -1,0 +1,69 @@
+Angular:	
+	Angular is a framework works above node.js used to develop client side web application.
+	Angular is also used to develop both mobile and desktop applications.
+
+	Angular is platform independent ( linux, mac, windows)
+	Angular support following data bindings
+		One Way Data Binding
+		Two Way Data Binding
+		Property binding
+		Event Binding
+		CSS style binding, class binding
+		Component binding		
+			@Input(), @Ouput decorators	
+		
+	Angular used to develop SPA (Single Page Applications)
+	Angular uses ajax
+	Angular support MV* pattern (mvc, mvvm, mvp )
+	Angular support input DI 
+	Angular support folllowing building blocks
+		Modules, Components,  Services, Pipes, Directives, Guard, etc.,
+
+	Angular contains in built module and service for Http calls
+
+===========================================
+Java, .NET, PHP, etc.,
+	These are technologies with frameworks used to develop server side web applications and web api.
+	Uses mutli threaded model ( locking and unlocking ).
+
+	Bookmyshow.com:	movie ticket booking		
+
+Node.js
+	Node.js is a technology, used to develop web application for server/client side
+	Node.js uses single threaded model (asychronous programming)
+	Ex: uber cab booking
+
+	promises, observable pattrens are used to handle asynchrnous 
+
+
+
+What is a framework?
+	Framework is a software infrastructure.
+	Framework consist of inbuilt/ready made source		
+	Using framework we need to write everything from the scracth
+
+Mutli threading
+
+
+
+What is the difference between java,.net, php compare to node.js?
+
+What is the difference between jsp, struts, sprint,mvc.net,asp.netcompare to angular?
+
+Ajax:	
+	Asynchronous javascript and xml
+
+	Used to submit part of the page to the server and update the current page, without creating a new page
+
+Software required for Angular	
+	Node.js:	https://nodejs.org/en/
+	Any ide like Visual studio code, atom, eclipse, webstorm, etc.,
+	https://code.visualstudio.com/
+
+	Angular CLI
+	npm install -g @angular/cli	=>	Available version
+	npm install -g @angular/cli@6.1	=>	Specified version
+
+
+Tomorrow session agenda:
+	node.js introduction, installation, architecture
