@@ -1,0 +1,231 @@
+Session Agenda:
+	Recap to Angular intro
+	Node.js concepts
+	Javascript programming
+
+
+Angular is a framework exist above Node.js (a javascript runtime) used to develop front end applications.
+
+Like Angular there are other frameworks like react, vue, backbone
+
+Node.js is universal framework for UI development
+----------------------------------------------------
+Target
+Front end web Application (or)
+UI Application (or)
+Client Side Application Development
+
+Softwares required:
+1) Node.js runtime		https://nodejs.org/en/
+2) Visual Studio code IDE	https://code.visualstudio.com/
+	(You can also use other IDEs 
+		Like: Eciplce, Node++, atom, sublime, etc.,)
+
+
+==========
+MEAN Technologies (UI Fullstack)
+MongoDB:	No Sql 
+Express.js:	To develop web API
+Angular:	UI Development framework
+Node.js:	Universal framework/runtime for ui development
+
+======================
+Javascript:
+	Javascript is a scripting language, specially designed to program the browser DOM
+	Initially javascript is used for	
+		Client side programming
+		Client side validation	
+		Client side automation
+===============
+Node.js is a javascript runtime.	
+	It is used to develop server side and client side web applications
+	It uses javascript programming
+
+
+As per UI development a project is a folder
+
+
+Working with javascript:
+Javascript follow c programming syntax:
+1) case sensitive:	Most of the statements to be provided in lower case
+2) statement termination:	East statement must terminate using semi colon(;)
+3) file name should contains .js file extension
+
+========================================
+
+Open D: drive
+Create a folder and name it as MyProject
+
+Open Visual Studio Code
+Open Folder and Choose MyProject
+
+----------------------------
+console.log():	This statement is used to display value or message
+It is similar to printf() in c programming
+It is similar to System.Out.Println() in java
+It is similar to Console.Writeline() in c# programming
+
+-----------------------------------------------
+Javascript file to be saved with an extension .js
+Create a file and name it program1.js
+-------------------
+
+//Program1.js
+console.log("Hello World!");
+console.log("Welcome to javascript");
+===========
+Open Terminal ( View Menu )
+To run the javascript program
+node program1.js
+
+==============
+How to declare variable in javascript?
+	var keyword is used to declare variable in javascript
+
+Note: javascript will not use int, char, string
+
+Working with javascript data types:
+1) string type
+	var name="kiran";
+
+Note: any string or any single character to be kept in single quotes or double quotes
+
+2) number type
+	var fee=30000;
+
+
+3) boolean type
+	var status = true;
+
+
+4) object type
+	var o = {}; 
+
+-------------------------
+single line comments:	//
+
+===================
+//Program2.js file
+var name = "kiran";
+console.log ( name);
+
+var city = "vizag";
+console.log(city);
+=======================
+//Program3.js
+var id=1;
+var name="kiran";
+var status=true;
+
+console.log("id = " + id);
+console.log("name is " +name);
+console.log("status is " +status);
+================================
+
+typeof():	This is used to display the data type of specified variable.
+============================
+//Program4.js
+var name="kiran";
+console.log("name is " +name);
+console.log("name data type is " + typeof (name) );
+=====================
+//Program5.js
+var name ="kiran";
+console.log ("name is " +name +", data type is "+typeof(name));
+=====================
+//Program6.js
+var id=1;
+var name="kiran";
+var status=true;
+
+console.log("id = "+id+", type is " +typeof(id));
+console.log("name = "+name+", type is " +typeof(name));
+console.log("status = "+status+", type is " +typeof(status));
+
+============================
+Working with programming constructs:
+	if
+	switch	
+	loops
+
+
+Note: Programming constructs are same as c-programming
+
+==============
+//Program8.js: To check the given number is positive or not
+var i=10;
+
+if ( i>0 )
+{
+    console.log(i+" is positive");
+}
+else{
+    console.log(i+" is not positive");
+}
+================================
+
+//Program9.js: To check the given number is zero or not
+i=0;
+if ( i==0 )
+ console.log("input is zero");
+else
+    console.log(i+" is not zero");
+
+=============================
+//Program10.js: To check biggest of two numbers
+var a=10;
+var b=12;
+if ( a>b )
+ console.log(a+" is big");
+else
+    console.log(b+" is big");
+=============================
+
+
+kiranpvn@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
