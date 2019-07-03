@@ -1,0 +1,221 @@
+Angular is used to develop front end web applications, these application run in browser, browser understand only javascript
+
+Javascript is a client side scripting language
+
+Javascript follow c programming syntax
+
+Keywords
+	var	let
+	typeof
+	if	else	
+	switch	break default case
+	while 	do
+	for 	for in		for of
+
+Special operators
+()	paranthesis
+[]	square brackets
+{}	curly braces
+"	double quote
+'	single quote
+`	back quote
+$	dollar
+;	semi colon
+:	colon
+
+&&	logical and operator
+||	logical or operator
+!	logical not operator
+
+=	assignment operator
+==	equlity comparision operator 
+		( compare only value, not the data type)
+
+===	compare datatype of two variables
+============
+//Display value in a variale with its data type
+var v1="kiran";
+console.log(`v1= ${v1}, data type is: ${typeof(v1)}`);
+
+==================
+//Changing data type of variable is possible
+var v1="kiran";
+console.log(`v1= ${v1}, data type is: ${typeof(v1)}`);
+
+v1=56;
+console.log(`v1= ${v1}, data type is: ${typeof(v1)}`);
+
+=========
+String templating:
+	This feature is used to provide variable with in the message
+It should be provided within back quote(``)
+The variable should be kept within ${varname}
+Ex:
+	console.log(`n=${n}`);
+
+It is equal to placeholder concept in .NET programming
+It is somewhat equal to format specifier in c-programming
+
+===========
+//Program1.js
+
+var ename="kiran";
+console.log ( `Name is ${ename} ` );
+================
+//Program2.js
+var n=8;
+console.log(`n = ${n} `);
+==============
+//Program3.js
+var n=4;
+console.log(`Given no is: ${n} `);
+console.log(`Next no of ${n} is ${n+1} `);
+console.log(`Previous no of ${n} is ${n-1} `);
+========================
+
+//Program4.js
+var name='kiran';
+var location='vizag';
+
+console.log(`name is ${name}`);
+console.log(`location is ${location}`);
+
+================================
+//Program5.js
+var a=10;
+var b=10;
+if ( a==b )
+    console.log("Both are same");
+else
+    console.log("Not same");    
+=======================
+//Note:  == used to compare only value in a variable
+//Note:	 == cannot compare data types
+
+=================================
+===	:	This operator is used to compare value and its data type
+This operator available in all ui technologies
+javascript, jquery, angular, react, node, etc.,
+==================================
+//Program6.js
+
+var a=10;		// number
+var b="10";		// string	
+
+if ( a===b )
+    console.log("Both are same");
+else
+    console.log("Not same");    
+
+=============================
+//Program7.js
+//Program to check the given number is a range of 0 to 100
+
+var marks=45;
+if ( marks >=0 && marks <=100 )
+	console.log(`Marks ${marks} are valid`);
+else
+	console.log(`${marks} marks are invalid`);
+
+=====================
+//Program8.js
+var m=56;
+var p=90;
+var c=100;
+console.log(`Maths: ${m}, Physics: ${p}, Chemistry: ${c}`);
+
+var tot=m+p+c;
+console.log(`Total marks are: ${tot}`);
+
+var avg=tot/3;
+console.log(`Average marks are: ${avg}`);
+==============================
+//Program8.js
+var m=56;
+var p=90;
+var c=100;
+console.log(`Maths: ${m}, Physics: ${p}, Chemistry: ${c}`);
+
+var tot=m+p+c;
+console.log(`Total marks are: ${tot}`);
+
+var avg=tot/3;
+console.log(`Average marks are: ${avg}`);
+var result="";
+
+if ( m>=35 && p>=35 && c>=35 )
+	result="PASS";
+else
+	result="FAIL";
+
+console.log(`Result is: ${result}`);
+==================
+//Program8.js
+var m=56;
+var p=90;
+var c=100;
+
+var result="";
+
+if ( m<35 || p<35 || c<35 )
+	result="FAIL";
+else
+	result="PASS";
+
+console.log(`Result is: ${result}`);
+==================
+//Program8.js
+var m=56;
+var p=90;
+var c=100;
+console.log(`Maths: ${m}, Physics: ${p}, Chemistry: ${c}`);
+
+var tot=m+p+c;
+
+var avg=tot/3;
+
+var result="";
+var grade="";
+if ( m>=35 && p>=35 && c>=35 ){
+	result="PASS";
+	if ( avg>=75 )
+		grade="A1";
+	else if ( avg>=60 )
+		grade="A";
+	else if ( avg>=50 )
+		grade="B";
+	else
+		grade="C";
+}
+else
+{
+	result="FAIL";
+	grade="NA";
+}
+
+console.log(`Average marks are: ${avg}`);
+console.log(`Total marks are: ${tot}`);
+console.log(`Result is: ${result}`);
+console.log(`Grade is: ${grade}`);
+
+==================
+commnly asked fresher level questions:
+
+Difference between == and === operators?
+Difference between ' and ` operators?
+Difference between var and let keywords?
+
+
+Tomorrow session agenda:
+	loops
+	while
+	do..while
+	for
+
+	Arrays in javascript
+
+	for in
+	for of
+
+
+
