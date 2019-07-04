@@ -28,15 +28,18 @@
 	</div>
 	<script type="text/javascript" src="data.js"></script>
 	<script type="text/javascript">
+		var table = {
+			color: "dark",
+			make: "wooden"
+		}
+
+		for(var key in table){
+			console.log(table[key])
+		}
 
 		var customer = document.createElement("div");
 		var customerName = document.createElement("h3");
 		var tableContent =  document.createElement("table");
-		var productItem =  document.createElement("tr");
-		var productDetails =  document.createElement("td");
-
-
-
 
 		console.log(typeof(data));
 		for(var i = 0 ; i < data.length; i = i + 1 ){
@@ -44,12 +47,28 @@
 			// console.log(data[i].orders);
 			var totalCost = 0;
 			for(var j = 0; j < data[i].orders.length ; j = j + 1){
+				var productItem =  document.createElement("tr");
+				var eachOrderObject = data[i].orders[j];
+				for(var key in eachOrderObject){
+					var tableColumn = document.createElement("td");
+					tableColumn.innerText = eachOrderObject[key];
+					productItem.appendChild(tableColumn);
+					customer.appendChild(productItem);
+				}
 				console.log(data[i].orders[j].itemCost)
 				totalCost = totalCost + data[i].orders[j].itemCost;
 				if(j == data[i].orders.length -1){
+					var totalCostRow = document.createElement("tr");
+					var totalCostColumn = document.createElement("td");
+					var priceColumn = document.createElement("td");
+					totalCostColumn.innerText = "TotalCost";
+					priceColumn.innerText = totalCost;
+					totalCostRow.appendChild(totalCostColumn);
+					totalCostRow.appendChild(priceColumn);
+					customer.appendChild(totalCostRow);
 					console.log(totalCost);	
 				}
-				
+				document.body.appendChild(customer);
 			}
 			var firstName = document.createElement("h3");
 			firstName.innerText = data[i].firstName;

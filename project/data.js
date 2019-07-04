@@ -19,6 +19,14 @@ var data = [
             {
                 "productName": "Shoes",
                 "itemCost": 199.99
+            },
+             {
+                "productName": "surf",
+                "itemCost": 10
+            },
+            {
+                "productName": "rin",
+                "itemCost":500
             }
         ],
         "latitude": 17.3457176,

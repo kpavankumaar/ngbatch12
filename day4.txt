@@ -1,0 +1,181 @@
+Angular used todevelopclient side web application.
+Angular works above node.js( javascript runtime)
+
+Javascript is a specially designed for client scripting 
+
+Client side application development will be done using javascript with the support of node.js
+
+Node.js will understand only javascript
+
+Datatypes in javascript
+	number, string, boolean, object
+
+variable declaration using var keyword
+Operators used in javascript
+
+control structures using if else
+
+//Program1.js:  To check the user credentails are valid or not
+var uname="kiran";
+var pwd="kumar";
+
+if ( uname=="kiran" && pwd=="kumar" )
+	console.log("Credentials found correct...");
+else	
+	console.log("Invalid input credentials...");
+====================
+Loops: It is a iteration control structure
+Used to repeat the statements.
+javascript support:
+while, for, do while loop
+
+And also javascript support following two loop:
+	for of
+	for in
+==========================
+while loop:
+	This is an entry control loop (Pre-tested loop)
+	Used to iterate statement after condition checking
+
+	while loop is an infinite loop, by providing a valid initial, condition and update statement the loop will be finite
+
+Syntax:
+[intial value;]
+while ( condition )
+{
+	//loop statements;
+	[update statement;]
+}
+==========================
+//Program2.js:	Display numbers from 1 to 10
+var i=1;
+while ( i<=10 )
+{
+	console.log(i);
+	i++;
+}
+========================
+//Program3.js:	Display numbers from 1 to 5 numbers with their square value
+
+var i=1;
+while ( i<=5 )
+{
+	console.log(i+" "+i*i);
+	i++;
+}
+=========================
+//Program3.js:	Display numbers from 1 to 5 numbers with their square value
+
+var i=1;
+while ( i<=5 )
+{
+	console.log(`Square of ${i} is ${i*i}`);
+	i++;
+}
+========================
+//Program3.js:	Display numbers from 1to5 numbers in same line
+var msg='';
+var i=1;
+while ( i<=5 )
+{
+	msg = msg + i+ ' ';
+	//msg += i+' ';
+	i++;
+}
+console.log(msg);
+
+======
+Assignment operators
+=		a=5
++=		a=a+5		a+=5
+-=		a=a-2		a-=2
+/=		a=a/2		a/=2
+*=		a=a*3		a*=3
+%=		a=a%2		a%=2
+
+====================
+//Program4.js: display multiplication table
+
+var n=5;
+
+var i=1;
+while ( i<=10 )
+{		
+	console.log(`${n} X ${i} = ${n*i}`);
+	i++;
+}
+
+============================
+//Program3.js:	Display numbers from 10to1 numbers in same line
+var msg='';
+var i=10;
+while ( i>=1 )
+{
+	msg += i+' ';
+	i--;
+}
+console.log(msg);
+
+====================================
+for loop:
+	for loop is a finite loop, it is also entry control loop
+
+Syntax:
+for ( initial value ; condition; update statement)
+{
+	loop statements;
+}
+
+==========================
+//Program6.js: To display 1 to 10 numbers
+for ( var i=1 ; i<=10;  i++ )
+	console.log(i);
+===========================
+//Program6.js: To display 10 to 1 numbers
+for ( var i=10 ; i>=1;  i-- )
+	console.log(i);
+===========================
+//Program6.js: To display multiplication table
+var n=7;
+for ( var i=1 ; i<=10;  i++ )
+	console.log(`${n} X ${i} = ${n*i}`);
+===========
+Task:
+	Calculate factorial value for a given number
+	Generate fibonacci series
+========================
+
+do while loop
+	It is a exit control loop, it is also an infinite loop
+
+Even the condition fail, the statements in the loop will be executed once
+
+Sy:
+[initial value;]
+do
+{
+	statements;
+}while ( condition );
+
+Ex:
+=====================
+//Program6.js: To display 1to 10 numbers
+var i=1;
+do{
+    console.log(i);
+    i++;
+}while  ( i<=10 );
+=================
+//Program6.js: To display 1to 10 numbers
+var i=11;
+do{
+    console.log(i);
+    i++;
+}while  ( i<=10 );
+
+
+
+
+
+
+
