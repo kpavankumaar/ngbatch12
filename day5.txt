@@ -1,0 +1,159 @@
+Array:
+	This is used to store more than one value in a single identification.
+Array is an index based 
+The first element will be with an index 0
+The Last element will be with an index items.length-1
+
+Javascript array:
+=> Used to store unlimited items in a single identification
+=>Array is an object
+=> Each item can be different type
+
+var items = new Array();
+(or)
+var items = [];
+
+console.log( typeof(items) );
+================================
+//Program1.js:	To display array variable type
+var items = [];
+console.log( typeof(items) );
+---------------------------------
+//Program2.js: To assign values into array and display
+var items = ['pencil','pen','eraser','sharpner','scale'];
+console.log ( items );
+=================================
+//Program3.js: To assign values into array and display
+var items = ['pencil','pen','eraser','sharpner','scale'];
+console.log ( items[0] );	//Display first item
+console.log ( items[1] );	//Display second item
+console.log ( items.length );	//Display items count
+console.log ( items[items.length-1] );	//Display last item
+===================================
+//Program4.js: Display items with thier position
+var items = ['pencil','pen','eraser','sharpner','scale'];
+console.log (`Items = ${items}`);
+console.log (`First item is ${items[0]}`  );	
+console.log (`Second item is ${items[1]}`  );	
+console.log (`Total items count is ${items.length}`  );	
+console.log (`Last item is ${items[items.length-1]}`  );	
+===================================
+//Program5.js: Display all items using while loop
+var items = ['pencil','pen','eraser','sharpner','scale'];
+var i=0;
+while ( i<items.length ){
+	console.log(items[i]);
+	i++;
+}
+===================================
+//Program6.js: Display all items with their positions
+var items = ['pencil','pen','eraser','sharpner','scale'];
+var i=0;
+while ( i<items.length ){
+	console.log(`items[${i}] = ${items[i]}`);
+	i++;
+}
+=====================================
+//Program7.js: Display all items using do while loop
+var items = ['pencil','pen','eraser','sharpner','scale'];
+var i=0;
+do
+{
+	console.log(items[i]);
+	i++;
+}while ( i<items.length );
+======================================
+//Program7.js: Display items with positions using do while 
+var items = ['pencil','pen','eraser','sharpner','scale'];
+var i=0;
+do
+{
+console.log(`items[${i}] = ${items[i]}`);
+	i++;
+}while ( i<items.length );
+=======================================
+//Program8.js: Display items using for loop
+var items = ['pencil','pen','eraser','sharpner','scale'];
+for ( var i=0 ; i<items.length ; i++ )	
+	console.log(`items[${i}] = ${items[i]}`);
+========================================
+//Program8.js: Display items using for loop
+var items = ['pencil','pen','eraser','sharpner','scale'];
+for ( var i=0 ; i<items.length ; i++ )	
+	console.log (items[i]);
+========================================
+what is var keyword?	
+	Used to declare a variable
+	The variable declared using var is available with in the block and even after the block
+------------
+//Ex: declare variable using var keyword
+for ( var i=1 ; i<=10; i++ )
+	console.log(i);		//Display 1 to 10 numbers
+
+console.log(i);			//Display 11
+--------------------
+what is let keyword?
+	Used to declare a variable
+	let keyword declared variable is available with in the block only
+=========================================
+//Ex: declare variable using let keyword
+for ( let i=1 ; i<=10; i++ )
+	console.log(i);		//Display 1 to 10 numbers
+
+console.log(i);			//Error
+=========================================
+What is the difference between for..of and for..in loops
+========================================
+for of:
+This is used iterate on array items without using index
+This loop is similar to foreach loop in other languages like java, C#, etc.,
+
+
+
+//Program8.js: Display items using for of loop
+var items = ['pencil','pen','eraser','sharpner','scale'];
+for ( let item of items  )	
+	console.log (item);
+
+
+=================================
+for in:
+This is used iterate on array item index
+using for in, the json object property identifier can be accessed
+
+//Program9.js: Display items index using for in loop
+var items = ['pencil','pen','eraser','sharpner','scale'];
+for ( let i in items )	
+	console.log ( i );
+================================
+
+//Program10.js: Display items using for in loop
+var items = ['pencil','pen','eraser','sharpner','scale'];
+for ( let i in items )	
+	console.log ( items[i] );
+
+======================================
+//Program11.js: Assign unlimited items in an array
+var items = ['pencil','pen','eraser','sharpner'];
+console.log(`Initial Items are: ${items}`);
+console.log(`Initial Items count is: ${items.length}`);
+
+items[items.length]="Sharpner";	//Adding item at end
+console.log(`Items after adding are: ${items}`);
+console.log(`Items count after adding is: ${items.length}`);
+===================================
+//Program12.js to store different items in array
+var items=['pencil',45,true ];
+for ( let item of items )
+    console.log(item);
+=========================================
+//Program12.js to items with data types 
+var items=['pencil',45,true ];
+for ( let item of items )
+    console.log(`${item} data type is ${typeof(item)}`);
+=======================================
+//Program12.js to items with data types 
+var items=['pencil',45,true, [100,200,300], {}, function(){} ];
+for ( let item of items )
+    console.log(`${item} data type is ${typeof(item)}`);
+==================
