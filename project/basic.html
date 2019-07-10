@@ -21,16 +21,44 @@
 	<button> hide </button>
 	<script type="text/javascript">
 		var divEl = document.getElementsByTagName("div")[0];
-		var btnEl = document.getElementsByTagName("button")[0];
+		var btnEl = document.getElementsByTagName("button")[1];
 		var userName = document.getElementsByName('username')[0];
 		var password = document.getElementsByName('pwd')[0];
 		var submitBtn = document.getElementById("sendData");
 		console.log(userName.value);
 		console.log(divEl.innerText);
 		console.log(divEl.innerHTML);
-		btnEl.onclick = function(){
-			console.log("test");
-			divEl.style.display = "none";
+		submitBtn.onclick= function(e){
+			e.preventDefault();
+			var userInfo = {
+				username : userName.value,
+				password : password.value
+			}
+			console.log(JSON.stringify(userInfo));
+		}
+
+		function Furniture(){
+			console.log(this);
+		}
+		window.Furniture();
+		var testObj = {
+			name : "krishna",
+			run: function(){
+				console.log(this);
+			}
+		}
+		testObj.run();
+
+
+		btnEl.onclick = function(e){
+			//console.log(e);
+			//e.preventDefault();
+			if(this.innerText === "hide"){
+				divEl.style.display = "none";	
+			}else{
+				divEl.style.display = "block";	
+			}
+			this.innerText = this.innerText === "hide" ? "show" : "hide";
 		}
 	</script>
 </body>
