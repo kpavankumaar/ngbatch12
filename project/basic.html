@@ -19,12 +19,14 @@
 		<button id="sendData"> submit</button>
 	</form>
 	<button> hide </button>
+	<button id="show"> show </button>
 	<script type="text/javascript">
 		var divEl = document.getElementsByTagName("div")[0];
 		var btnEl = document.getElementsByTagName("button")[1];
 		var userName = document.getElementsByName('username')[0];
 		var password = document.getElementsByName('pwd')[0];
 		var submitBtn = document.getElementById("sendData");
+		var showBtn = document.getElementById("show");
 		console.log(userName.value);
 		console.log(divEl.innerText);
 		console.log(divEl.innerHTML);
@@ -35,6 +37,9 @@
 				password : password.value
 			}
 			console.log(JSON.stringify(userInfo));
+		}
+		showBtn.onclick = function(){
+			divEl.style.display = "block"
 		}
 
 		function Furniture(){

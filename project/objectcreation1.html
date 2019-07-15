@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function DiningArea(){
+
+		}
+		function SofaMaker(Sofa){
+			this.sofa = Sofa;
+		}
+		function Furniture(sofa, chairs, diningarea, kitchen){
+			// SofaMaker.call(this,sofa);
+			SofaMaker(sofa);
+			this.chairs = chairs;
+		}
+
+		var chairOrder = new Furniture("sofa"," wooden chairs ");
+	</script>
+</body>
+</html>
