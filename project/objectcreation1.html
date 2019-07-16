@@ -8,16 +8,26 @@
 		function DiningArea(){
 
 		}
-		function SofaMaker(Sofa){
-			this.sofa = Sofa;
+		function SofaMaker(matType, shape){
+			console.log(this);
+			this.sofamaterilatype = matType;
+			this.shape = shape;
+			this.sofaDetails = function(){
+				console.log(this.shape, this.sofamaterilatype);
+			}
 		}
+
 		function Furniture(sofa, chairs, diningarea, kitchen){
 			// SofaMaker.call(this,sofa);
-			SofaMaker(sofa);
+			SofaMaker.apply(this,sofa);
+			//SofaMaker(sofa);
 			this.chairs = chairs;
 		}
 
-		var chairOrder = new Furniture("sofa"," wooden chairs ");
+		var chairOrder = new Furniture(["wooden","l-shape"]," wooden chairs ");
+		var chairOrder1 = new Furniture(["wooden","standard shape"]," metal chairs ");
+
+
 	</script>
 </body>
 </html>
