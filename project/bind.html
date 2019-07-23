@@ -13,7 +13,13 @@
 			testFn : function(){
 				console.log(this);
 			}
-		}
+		};
+		(function(obj){
+			var name_1 = "krishna";
+			console.log(10);
+			var data = [{},{},{}];
+			obj.serviceData = data;
+		})(window);
 	</script>
 </body>
 </html>

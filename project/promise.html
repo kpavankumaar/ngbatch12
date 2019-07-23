@@ -8,7 +8,7 @@
 	function build(resolve,reject){
 		var xhr = new XMLHttpRequest()
 		console.log(xhr.readyState);
-		xhr.open("GET","https://jsonplaceholder.typicode.com/pos",true);
+		xhr.open("GET","https://jsonplaceholder.typicode.com/posts",true);
 		console.log(xhr.readyState);
 		xhr.onreadystatechange = function(){
 			if(xhr.readyState == 4 && xhr.status == 200){
@@ -45,7 +45,12 @@
 	new Test(function(resolve,reject){
 		resolve(10)
 	})
-	"text"
+	// var testFn = function (){
+	// 	console.log("test")
+	// }
+
+	
+	
 </script>
 </body>
 </html>
