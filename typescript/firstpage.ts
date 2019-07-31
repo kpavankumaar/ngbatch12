@@ -1,3 +1,8 @@
+console.log("testNum",testNum);
+// console.log(arr1);
+// console.log(name_1);
+// console.log(test_1);
+var testNum = 10;
 let name_1 = "ravi";
 console.log(name_1);
 // function printOut(i){
@@ -46,6 +51,10 @@ const arr1 = [15,25,35,"",45]
 arr1.splice(3,1,40);
 var arr2 = arr1.slice(1,3);
 let test_1 = () => {
-    console.log('arrow function')
+    console.log('arrow function');
+    console.log(this);
+    return function (){
+        console.log("test")
+    }
 }
 test_1();
