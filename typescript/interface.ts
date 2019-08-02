@@ -35,7 +35,35 @@ test_fn1= () =>{
     return ["testdata"]
 }
 
-function name_5<T>(data:T):<T>()=>T
+function name_5<T>(data:T):T{
+    return data
+}
 
-let fnDef = (a) => a*2;
+let fnDef = (a) => {
+  return  a*2
+};
 console.log(fnDef(10))
+
+interface employeeDetails {
+    name : string;
+    age: number;
+    adhaarNo: number;
+    phone:number;
+    bloodgroup: string;
+    email:string;
+    salary:number;
+    city?:string;
+}
+var detailsOfTheEmployees : employeeDetails[];
+detailsOfTheEmployees=[
+    {
+        name : "krishna",
+        age: 28,
+        adhaarNo: 123456781234,
+        phone:1234567890,
+        bloodgroup: "o+",
+        email:"k.pavankumaar@gmail.com ",
+        salary:1000000,
+        
+    }
+] 
