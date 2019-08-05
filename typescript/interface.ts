@@ -53,6 +53,7 @@ interface employeeDetails {
     email:string;
     salary:number;
     city?:string;
+    [key:string]:any;
 }
 var detailsOfTheEmployees : employeeDetails[];
 detailsOfTheEmployees=[
@@ -64,6 +65,6 @@ detailsOfTheEmployees=[
         bloodgroup: "o+",
         email:"k.pavankumaar@gmail.com ",
         salary:1000000,
-        
+        address:""
     }
 ] 
