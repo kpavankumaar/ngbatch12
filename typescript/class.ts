@@ -1,4 +1,12 @@
-class MotherBoard{
+interface HardwareCPU{
+    processor:string;
+    ramslot:string;
+    ports:string[];
+}
+interface Powersupply{
+    smps:string;
+}
+class MotherBoard implements HardwareCPU, Powersupply{
     constructor(processor:string, ram:string, ports:string[],public powersupply){
        this.processor = processor;
        this.ramslot = ram;
