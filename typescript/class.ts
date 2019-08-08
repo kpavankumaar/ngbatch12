@@ -1,6 +1,7 @@
+import { ManufacturingUnit } from './accessors';
 interface HardwareCPU{
     processor:string;
-    ramslot:string;
+    ramslot?:string;
     ports:string[];
 }
 interface Powersupply{
@@ -9,11 +10,11 @@ interface Powersupply{
 class MotherBoard implements HardwareCPU, Powersupply{
     constructor(processor:string, ram:string, ports:string[],public powersupply){
        this.processor = processor;
-       this.ramslot = ram;
+       //this.ramslot = ram;
        this.ports = ports;
     }
     processor = "i7";
-    ramslot= "8gb";
+    //ramslot= "8gb";
     ports= ['hdmi','vga'];
 }
 class Accessorries extends MotherBoard{
@@ -27,3 +28,4 @@ class PersonalComputer extends Accessorries {
 }
 let cpu1 = new MotherBoard("i7","16gb",['usb','audio'],"smps");
 let pc1 = new PersonalComputer("i7","16gb",['usb','audio'],"smps");
+let engineDef = new ManufacturingUnit.Engine('abc','xyz','def');
