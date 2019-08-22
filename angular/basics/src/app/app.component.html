@@ -2,7 +2,19 @@
 <input type="text" #user value="content">
 <h3 [style.color] = 'color'>{{title}} </h3>
 <p >{{ 6 == 2*3}}</p>
-<button  (click) = 'changeColor($event.target)'>click</button>
-<br>
-<input type="text" placeholder = 'username' (keyup) = 'updateUsername($event.target.value)'>
-<h3>{{username}}</h3>
+<button (click)='changeColor()'>Click</button>
+<input type="text" #testName [value] = 'username' (keyup) = 'updateUserDetails(testName.value)'>
+<div>{{username}}</div>
+
+<div>
+    <input type="text" 
+        [value] = 'username' 
+        (keyup.enter) = 'updateUserDetails($event.target.value)'
+        (blur) = 'changeInUserDetails($event.target.value)'
+    >
+    <input type="text" [(ngModel)] = 'username'>
+</div>
+<app-temlate-driven></app-temlate-driven>
+<select >
+    <option *ngFor= 'let colorVal of arr'>{{colorVal}}</option>
+</select>
