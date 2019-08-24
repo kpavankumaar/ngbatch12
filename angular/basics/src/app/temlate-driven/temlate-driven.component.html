@@ -4,10 +4,28 @@
     <input 
       type="email" 
       ngModel
+      required
+      email
       name="email"
       class="form-control" 
       id="exampleInputEmail1" 
+      [ngClass] = '{"is-invalid" : loginFormGroup.controls.email?.invalid}'
       aria-describedby="emailHelp" placeholder="Enter email">
+      <div class="invalid-feedback" > 
+        <p *ngIf = "loginFormGroup.controls.email?.errors.required">This is a mandatory field</p>
+        <p *ngIf = "loginFormGroup.controls.email?.errors.email">Enter a valid email address</p>
+        
+      </div>
+      <div>
+        <ul>
+          <li><h5>email valid </h5> <span>{{loginFormGroup.controls.email?.valid}}</span></li>
+          <li><h5>email invalid </h5> <span>{{loginFormGroup.controls.email?.invalid}}</span></li>
+          <li><h5>email touched </h5> <span>{{loginFormGroup.controls.email?.touched}}</span></li>
+          <li><h5>email untouched </h5> <span>{{loginFormGroup.controls.email?.untouched}}</span></li>
+          <li><h5>email pristine </h5> <span>{{loginFormGroup.controls.email?.pristine}}</span></li>
+          <li><h5>email dirty </h5> <span>{{loginFormGroup.controls.email?.dirty}}</span></li>
+        </ul>
+      </div>
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
   <div class="form-group">
