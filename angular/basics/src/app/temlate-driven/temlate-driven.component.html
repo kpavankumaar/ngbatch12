@@ -3,18 +3,20 @@
     <label for="exampleInputEmail1">Email address</label>
     <input 
       type="email" 
+      #emailVar = 'ngModel'
       ngModel
       required
       email
+      minlength="3"
       name="email"
       class="form-control" 
       id="exampleInputEmail1" 
-      [ngClass] = '{"is-invalid" : loginFormGroup.controls.email?.invalid}'
+      [ngClass] = '{"is-invalid" : loginFormGroup.controls.email?.invalid && emailVar.touched }'
       aria-describedby="emailHelp" placeholder="Enter email">
       <div class="invalid-feedback" > 
-        <p *ngIf = "loginFormGroup.controls.email?.errors.required">This is a mandatory field</p>
+        <p *ngIf = "emailVar.errors.required">This is a mandatory field</p>
         <p *ngIf = "loginFormGroup.controls.email?.errors.email">Enter a valid email address</p>
-        
+        <p *ngIf = "loginFormGroup.controls.email?.errors.minlength">emailaddress length must be more that 3</p>
       </div>
       <div>
         <ul>
