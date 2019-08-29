@@ -25,7 +25,32 @@ export class ReactiveformComponent implements OnInit {
     this.rootFormGroup = new FormGroup({
       name: new FormControl('krishna',Validators.required),
       rating:new FormControl('',[Validators.required,ratingValidation(1,10)]),
+      notifymethod: new FormControl('phone'),
+      email:new FormControl(),
+      phone:new FormControl()
     })
+    
   }
-
+  notificationProcess(){
+    let chooseNotificationMethod = this.rootFormGroup.get('notifymethod');
+    
+    setTimeout(()=>{
+      let phone = this.rootFormGroup.get('phone');
+      let emailCtrl = this.rootFormGroup.get('email');
+      console.log('chooseNotificationMethod',chooseNotificationMethod);  
+      if(chooseNotificationMethod.value === 'phone'){
+        phone.setValidator(['Validators.required']);
+        emailCtrl.clearValidator();
+      }else{
+        console.log('email form control', emailCtrl);
+        emailCtrl.setValidator(['Validators.required']);
+        phone.clearValidator();
+      }
+  
+      phone.updateValueAndValidity();
+      emailCtrl.updateValueAndValidity();
+    },1);
+    console.log('chooseNotificationMethod',chooseNotificationMethod.value);
+    
+  }
 }

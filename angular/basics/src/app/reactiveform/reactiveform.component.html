@@ -24,17 +24,41 @@
       </p>
     </div>
   </div>
+  <div class="form-check">
+    <input class="form-check-input" (click)="notificationProcess()" type="radio" name="notifymethod" id="exampleRadios1" formControlName = "notifymethod" value="phone" checked>
+    <label class="form-check-label" for="exampleRadios1">
+      Phone Notification
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" (click)="notificationProcess()" type="radio" name="notifymethod" id="exampleRadios2" formControlName = "notifymethod" value="email">
+    <label class="form-check-label" for="exampleRadios2">
+      Email notification
+    </label>
+  </div>
+  
   <div class="form-group">
     <label for="phone">Phone</label>
-    <input type="phone" class="form-control" id="phone" placeholder="phone">
+    <input 
+      type="phone" 
+      class="form-control" 
+      formControlName = "phone"
+      id="phone" 
+      [ngClass] = '{"is-invalid": rootFormGroup.get("phone").invalid}'
+      placeholder="phone" >
   </div>
   
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    
+    <input 
+      type="email" 
+      class="form-control" 
+      formControlName = "email"
+      id="exampleInputEmail1" 
+      [ngClass] = '{"is-invalid": rootFormGroup.get("email").invalid}'
+      aria-describedby="emailHelp" 
+      placeholder="Enter email">
   </div>
-  
   <div class="form-group form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
