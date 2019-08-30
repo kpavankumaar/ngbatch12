@@ -5,13 +5,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TemlateDrivenComponent } from './temlate-driven/temlate-driven.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { CustomersComponent } from './customers/customers.component';
+import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TemlateDrivenComponent,
-    ReactiveformComponent
+    ReactiveformComponent,
+    CustomersComponent,
+    CustomerDetailComponent
   ],
   imports: [
     BrowserModule,

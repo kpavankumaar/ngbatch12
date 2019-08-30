@@ -9,9 +9,9 @@ export class AppComponent implements OnInit {
   title = 'Welcome to Angular Session';
   username:string;
   arr = ['red','green','blue'];
-  @ViewChild('user') userElement:ElementRef;
+  //@ViewChild('user') userElement:ElementRef;
   ngOnInit(){
-    console.log(this.userElement.nativeElement.value);
+   // console.log(this.userElement.nativeElement.value);
   }
   color = 'grey';
   changeColor(){
