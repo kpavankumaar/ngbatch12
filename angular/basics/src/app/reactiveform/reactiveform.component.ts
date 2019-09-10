@@ -26,30 +26,39 @@ export class ReactiveformComponent implements OnInit {
       name: new FormControl('krishna',Validators.required),
       rating:new FormControl('',[Validators.required,ratingValidation(1,10)]),
       notifymethod: new FormControl('phone'),
+<<<<<<< HEAD
       email:new FormControl();
       new FormControl()
+=======
+      email:new FormControl(),
+      phone:new FormControl(),
+      address: new FormGroup({
+        city: new FormControl('',Validators.required),
+        state:new FormControl('',Validators.required)
+      })
+>>>>>>> 4844efad399e37be54576803fda27350411d3f45
     })
     
   }
   notificationProcess(){
     let chooseNotificationMethod = this.rootFormGroup.get('notifymethod');
-    
+    var phone = this.rootFormGroup.get('phone');
+    var emailCtrl = this.rootFormGroup.get('email');
     setTimeout(()=>{
-      let phone = this.rootFormGroup.get('phone');
-      let emailCtrl = this.rootFormGroup.get('email');
+      
       console.log('chooseNotificationMethod',chooseNotificationMethod);  
       if(chooseNotificationMethod.value === 'phone'){
-        phone.setValidator(['Validators.required']);
-        emailCtrl.clearValidator();
+        phone.setValidators(Validators.required);
+        emailCtrl.clearValidators();
       }else{
         console.log('email form control', emailCtrl);
-        emailCtrl.setValidator(['Validators.required']);
-        phone.clearValidator();
+        emailCtrl.setValidators([Validators.required]);
+        phone.clearValidators();
       }
   
       phone.updateValueAndValidity();
       emailCtrl.updateValueAndValidity();
-    },1);
+    },0);
     console.log('chooseNotificationMethod',chooseNotificationMethod.value);
     
   }
