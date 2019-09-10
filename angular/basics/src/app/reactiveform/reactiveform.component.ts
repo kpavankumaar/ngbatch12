@@ -26,17 +26,12 @@ export class ReactiveformComponent implements OnInit {
       name: new FormControl('krishna',Validators.required),
       rating:new FormControl('',[Validators.required,ratingValidation(1,10)]),
       notifymethod: new FormControl('phone'),
-<<<<<<< HEAD
-      email:new FormControl();
-      new FormControl()
-=======
       email:new FormControl(),
       phone:new FormControl(),
       address: new FormGroup({
         city: new FormControl('',Validators.required),
         state:new FormControl('',Validators.required)
       })
->>>>>>> 4844efad399e37be54576803fda27350411d3f45
     })
     
   }
