@@ -6,6 +6,7 @@ import { CustomerDetailComponent } from './customer-detail.component';
   imports: [
     CommonModule
   ],
-  declarations: [CustomerDetailComponent]
+  declarations: [CustomerDetailComponent],
+  exports:[CustomerDetailComponent]
 })
 export class CustomerDetailModule { }
