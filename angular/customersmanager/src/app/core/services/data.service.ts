@@ -15,4 +15,10 @@ export class DataService{
             map(data => data)
         )
     }
+    getCustomerDataById(id):Observable<ICustomer>{
+        console.log(this.url+'/'+id, typeof id);
+        return this.http.get<ICustomer>(this.url+'/'+id).pipe(
+            map(data => data)
+        )
+    }
 }
