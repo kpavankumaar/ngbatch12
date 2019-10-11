@@ -1,1 +1,20 @@
 <p>customerslistview works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th appSortby = "firstName" (sorted) = "sort($event)" >First Name </th>
+        <th appSortby = "lastName" (sorted) = "sort($event)" >Last Name</th>
+        <th appSortby = "address" (sorted) = "sort($event)" >Address</th>
+        <th appSortby = "city" (sorted) = "sort($event)" >City</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let cust of customersData">
+        <th>{{ cust.firstName | capitalize }}</th>
+        <td>{{ cust.lastName | capitalize}}</td>
+        <td>{{ cust.address }}</td>
+        <td>{{ cust.city }}</td>
+      </tr>
+     
+    </tbody>
+  </table>

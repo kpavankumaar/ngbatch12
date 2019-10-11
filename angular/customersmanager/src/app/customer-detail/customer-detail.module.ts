@@ -7,6 +7,8 @@ import { CustomerComponent } from './customer.component';
 import { CustomerDetailComponent } from './customer-detail.component';
 import { CustomerOrderComponent } from './customer-order.component';
 import { EditcustomerComponent } from './editcustomer.component';
+import { CanActivateGaurd } from './canactivategaurd';
+import { CanDeactivateGaurd } from './candeactivategaurd';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { EditcustomerComponent } from './editcustomer.component';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    CustomerDetailRoutingModule
-  ]
+    CustomerDetailRoutingModule,
+    
+  ],
+  providers:[CanActivateGaurd,CanDeactivateGaurd]
 })
 export class CustomerDetailModule { }

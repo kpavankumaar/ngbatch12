@@ -21,4 +21,13 @@ export class DataService{
             map(data => data)
         )
     }
+    updateCustomer(customer):Observable<Boolean>{
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/x-www-form-urlencoded');
+        headers.append('Accept', 'application/json');
+        return this.http.put<Boolean>(this.url+'/'+customer.id,customer);
+    }
+    deleteCustomer(id):Observable<boolean>{
+        return this.http.delete<boolean>(this.url + '/' + id);
+    }
 }

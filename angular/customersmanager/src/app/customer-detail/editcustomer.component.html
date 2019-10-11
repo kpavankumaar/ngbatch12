@@ -23,7 +23,7 @@
         <input type="text" formControlName='state' class="form-control" id="State" aria-describedby="emailHelp" placeholder="State">
     </div>  
     
-    <button type="submit" class="btn btn-primary">Delete</button>
-    <button type="submit" class="btn btn-primary">Cancel</button>
-    <button type="submit" class="btn btn-primary">Update</button>
+    <button type="submit" class="btn btn-primary" (click)= 'delete()'>Delete</button>
+    <button type="submit" class="btn btn-primary" (click) = 'leavePage()'>Cancel</button>
+    <button type="submit" class="btn btn-primary" (click)='submit()'>Update</button>
 </form>

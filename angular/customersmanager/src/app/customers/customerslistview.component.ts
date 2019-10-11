@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../core/services/data.service';
+import { SorterService } from "../core/services/sorter.service";
 
 @Component({
   selector: 'app-customerslistview',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerslistviewComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private dataService: DataService, private sorterService:SorterService) { }
+  customersData;
   ngOnInit() {
+    this.dataService.getCustomersData().subscribe((data)=>{
+      this.customersData = data;
+    })
   }
-
+  sort(prop:string){
+    console.log('sort method being called');
+    this.sorterService.sort(this.customersData, prop);
+  }
 }
